@@ -4,6 +4,8 @@ import Error from "../Main/Error";
 import Home from "../Pages/Home/Home";
 import SingIn from "../Social/SingIn";
 import SignUp from "../Social/signUp";
+import ResetPass from "../components/ResetPass/ResetPass";
+import AddVisa from "../Pages/AddVisa/AddVisa";
 
 const routes = createBrowserRouter([
   {
@@ -22,6 +24,14 @@ const routes = createBrowserRouter([
       {
         path: "/signUp",
         element: <SignUp />,
+      },
+      {
+        path: "/reset",
+        element: <ResetPass />,
+      },
+      {
+        path: "/addVisa",
+        element: <AddVisa />,
       },
     ],
   },

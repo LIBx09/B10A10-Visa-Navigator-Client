@@ -6,9 +6,14 @@ const Navbar = () => {
   console.log(user);
 
   const nav = (
-    <li>
-      <Link to="/">Home</Link>
-    </li>
+    <>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/addVisa">Add Visa</Link>
+      </li>
+    </>
   );
 
   return (

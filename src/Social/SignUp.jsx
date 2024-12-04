@@ -4,8 +4,21 @@ import { toast } from "react-toastify";
 import useAuth from "../Hooks/useAuth";
 
 const SignUp = () => {
-  const { createUser, setUser, manageUserProfile } = useAuth();
+  const { createUser, setUser, manageUserProfile, googleSignin } = useAuth();
   const navigate = useNavigate();
+
+  const handleGoogleSignIn = () => {
+    googleSignin()
+      .then((res) => {
+        console.log(res);
+        navigate("/");
+        toast.success("Successfully logged in with Google!");
+      })
+      .catch((error) => {
+        console.error(error);
+        toast.error("Google Sign-In failed. Please try again.");
+      });
+  };
 
   const handleSignUp = (e) => {
     e.preventDefault();
@@ -15,6 +28,23 @@ const SignUp = () => {
     const name = form.name.value;
     const photo = form.name.value;
     console.log(email, password, name, photo);
+
+    if (name.length < 4) {
+      toast.error("Your Name should Have at least 4 character");
+      return;
+    }
+
+    if (password.length < 6) {
+      toast.error(
+        "Password Should be 6 character also Your password should have at least one uppercase and one lowercase character."
+      );
+      return;
+    } else if (!/^(?=.*[a-z])(?=.*[A-Z]).{6,}$/.test(password)) {
+      toast.error(
+        "Password Should be 6 character also Your password should have at least one uppercase and one lowercase character."
+      );
+      return;
+    }
 
     createUser(email, password)
       .then((userCredential) => {
@@ -27,7 +57,7 @@ const SignUp = () => {
       })
       .catch((error) => {
         console.error(error);
-        toast.error("Email already in use");
+        toast.error("Invalid Credential");
       });
   };
 
@@ -36,7 +66,10 @@ const SignUp = () => {
       <div className="card glass-effect bg-base-100  shrink-0 shadow-2xl w-full lg:w-5/12 mx-auto">
         <form onSubmit={handleSignUp} className="card-body">
           <div>
-            <button className="btn rounded-full btn-outline btn-accent">
+            <button
+              onClick={handleGoogleSignIn}
+              className="btn rounded-full btn-outline btn-accent"
+            >
               Google
             </button>
           </div>
@@ -88,7 +121,7 @@ const SignUp = () => {
             />
           </div>
           <label className="label">
-            <Link to="/login" className="label-text-alt link link-hover">
+            <Link to="/signIn" className="label-text-alt link link-hover">
               Have an Account, please&nbsp;
               <span className="text-red-700">Login</span>
             </Link>

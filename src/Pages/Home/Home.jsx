@@ -1,5 +1,3 @@
-// import { DotLottieReact } from "@lottiefiles/dotlottie-react";
-
 const Home = () => {
   return (
     <div>
