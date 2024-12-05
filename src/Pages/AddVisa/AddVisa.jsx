@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 /* eslint-disable no-unused-vars */
 const AddVisa = () => {
@@ -30,7 +31,7 @@ const AddVisa = () => {
     const validity = form.validity.value;
     const application_method = form.application_method.value;
     const photo = form.photo.value;
-    console.log(
+    const newVisa = {
       country_name,
       process_time,
       description,
@@ -40,8 +41,26 @@ const AddVisa = () => {
       application_method,
       photo,
       visaType,
-      selectedDocuments
-    );
+      selectedDocuments,
+    };
+    console.log(newVisa);
+
+    //send data to the server
+
+    fetch("http://localhost:5000/visa", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newVisa),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          toast.success("Data added to the DB successfully");
+        }
+      });
   };
   // country_name       photo
   return (
@@ -222,8 +241,8 @@ const AddVisa = () => {
               <label>
                 <input
                   type="checkbox"
-                  value="Recent passport-sized photograph"
-                  //   onChange={handleCheckboxChange}
+                  value="Nationality"
+                  onChange={handleCheckbox}
                 />
                 Nationality
               </label>
