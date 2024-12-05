@@ -54,6 +54,23 @@ const SignUp = () => {
         navigate("/");
         e.target.reset();
         toast.success("Successfully registered!");
+        const newUser = { name, email, photo };
+
+        //save new user info to the data base.
+        fetch("http://localhost:5000/users", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(newUser),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            if (data.insertedId) {
+              toast.success("Data added to the DB successfully");
+            }
+          });
       })
       .catch((error) => {
         console.error(error);

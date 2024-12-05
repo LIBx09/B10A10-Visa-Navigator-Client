@@ -3,7 +3,7 @@ import useAuth from "../../Hooks/useAuth";
 
 const Navbar = () => {
   const { user, logOut } = useAuth();
-  console.log(user);
+  // console.log(user);
 
   const nav = (
     <>
@@ -12,6 +12,9 @@ const Navbar = () => {
       </li>
       <li>
         <Link to="/visa">Visa</Link>
+      </li>
+      <li>
+        <Link to="/myVisa">My visa</Link>
       </li>
       <li>
         <Link to="/addVisa">Add Visa</Link>

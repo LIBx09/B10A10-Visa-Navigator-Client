@@ -6,9 +6,9 @@ import SingIn from "../Social/SingIn";
 import SignUp from "../Social/signUp";
 import ResetPass from "../components/ResetPass/ResetPass";
 import AddVisa from "../Pages/AddVisa/AddVisa";
-import LatestVisa from "../components/LatestVisa/LatestVisa";
 import Visa from "../Pages/Visa/Visa";
 import VisaDetails from "../Pages/VisaDetails/VisaDetails";
+import MyVisas from "../Pages/MyVisas/MyVisas";
 
 const routes = createBrowserRouter([
   {
@@ -33,6 +33,11 @@ const routes = createBrowserRouter([
           fetch(`http://localhost:5000/visa/${params.id}`),
       },
       {
+        path: "myVisa",
+        element: <MyVisas />,
+        loader: () => fetch("http://localhost:5000/visa"),
+      },
+      {
         path: "/signIn",
         element: <SingIn />,
       },
@@ -49,10 +54,6 @@ const routes = createBrowserRouter([
         element: <AddVisa />,
       },
     ],
-  },
-  {
-    path: "/latestVisa",
-    element: <LatestVisa />,
   },
 ]);
 

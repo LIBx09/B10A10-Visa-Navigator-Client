@@ -5,11 +5,12 @@ import {
   FaGlobe,
   FaFileAlt,
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
-const LatestVisaCard = ({ visa }) => {
+const MyVisaCard = ({ visa }) => {
+  //   console.log(visa);
+
   const {
-    _id,
     country_name,
     process_time,
     fee,
@@ -55,17 +56,17 @@ const LatestVisaCard = ({ visa }) => {
           </li>
         </ul>
 
-        <div className="card-actions justify-end">
+        {/* <div className="card-actions justify-end">
           <button className="btn btn-warning">
             <Link to={`/details/${_id}`}>See Details</Link>
           </button>
           <button className="btn btn-warning">
             <Link to="/visa">See All Visa</Link>
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
 };
 
-export default LatestVisaCard;
+export default MyVisaCard;

@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
+import useAuth from "../../Hooks/useAuth";
 
 /* eslint-disable no-unused-vars */
 const AddVisa = () => {
   const [visaType, setVisaType] = useState("");
   const [selectedDocuments, setSelectDocuments] = useState([]);
+  const { user } = useAuth();
 
   const handleVisaType = (e) => {
     setVisaType(e.target.value);
@@ -32,6 +34,7 @@ const AddVisa = () => {
     const application_method = form.application_method.value;
     const photo = form.photo.value;
     const newVisa = {
+      user_email: user.email,
       country_name,
       process_time,
       description,
