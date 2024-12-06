@@ -20,7 +20,7 @@ const Modal = ({ data }) => {
     const email = form.email.value;
     const visa_fee = form.visa_fee.value;
     const apply_date = form.apply_date.value;
-    console.log(first_Name, last_Name, email, visa_fee, apply_date);
+    // console.log(first_Name, last_Name, email, visa_fee, apply_date);
 
     const applicationData = {
       visa_Id: data._id,

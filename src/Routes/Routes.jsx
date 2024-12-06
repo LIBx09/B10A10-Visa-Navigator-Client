@@ -9,6 +9,8 @@ import AddVisa from "../Pages/AddVisa/AddVisa";
 import Visa from "../Pages/Visa/Visa";
 import VisaDetails from "../Pages/VisaDetails/VisaDetails";
 import MyVisas from "../Pages/MyVisas/MyVisas";
+import PrivateRoutes from "./PrivateRoutes";
+import UpdateModal from "../components/Modal/UpdateModal";
 
 const routes = createBrowserRouter([
   {
@@ -28,14 +30,32 @@ const routes = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        element: <VisaDetails />,
+        element: (
+          <PrivateRoutes>
+            <VisaDetails />
+          </PrivateRoutes>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/visa/${params.id}`),
       },
       {
         path: "myVisa",
-        element: <MyVisas />,
+        element: (
+          <PrivateRoutes>
+            <MyVisas />
+          </PrivateRoutes>
+        ),
         loader: () => fetch("http://localhost:5000/visa"),
+      },
+      {
+        path: "/update/:id",
+        element: (
+          <PrivateRoutes>
+            <UpdateModal />
+          </PrivateRoutes>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/visa/${params.id}`),
       },
       {
         path: "/signIn",
