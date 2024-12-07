@@ -10,7 +10,8 @@ import Visa from "../Pages/Visa/Visa";
 import VisaDetails from "../Pages/VisaDetails/VisaDetails";
 import MyVisas from "../Pages/MyVisas/MyVisas";
 import PrivateRoutes from "./PrivateRoutes";
-import UpdateModal from "../components/Modal/UpdateModal";
+import UpdateModal from "../components/UpdateModal/UpdateModal";
+import AppliedVisa from "../Pages/AppliedVisa/AppliedVisa";
 
 const routes = createBrowserRouter([
   {
@@ -56,6 +57,15 @@ const routes = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/visa/${params.id}`),
+      },
+      {
+        path: "/applied",
+        element: (
+          <PrivateRoutes>
+            <AppliedVisa />
+          </PrivateRoutes>
+        ),
+        loader: () => fetch("http://localhost:5000/applied"),
       },
       {
         path: "/signIn",

@@ -1,6 +1,5 @@
 import { useLoaderData } from "react-router-dom";
 import LatestVisa from "../../components/LatestVisa/LatestVisa";
-import UpdateModal from "../../components/Modal/UpdateModal";
 
 const Home = () => {
   const visas = useLoaderData();
@@ -23,7 +22,6 @@ const Home = () => {
       <section>
         <h2>extra 3</h2>
       </section>
-      <UpdateModal />
     </main>
   );
 };

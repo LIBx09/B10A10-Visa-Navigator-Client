@@ -4,10 +4,24 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import useAuth from "../../Hooks/useAuth";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Modal = ({ data }) => {
   const { user } = useAuth();
-  //   console.log(user.email);
+  console.log(data);
+
+  const {
+    country_name,
+    process_time,
+    description,
+    age_limit,
+    fee,
+    validity,
+    application_method,
+    photo,
+    visaType,
+    selectedDocuments,
+  } = data;
 
   const [startDate, setStartDate] = useState(new Date());
 
@@ -20,10 +34,18 @@ const Modal = ({ data }) => {
     const email = form.email.value;
     const visa_fee = form.visa_fee.value;
     const apply_date = form.apply_date.value;
-    // console.log(first_Name, last_Name, email, visa_fee, apply_date);
 
-    const applicationData = {
-      visa_Id: data._id,
+    const appliedData = {
+      country_name,
+      process_time,
+      description,
+      age_limit,
+      fee,
+      validity,
+      application_method,
+      photo,
+      visaType,
+      selectedDocuments,
       first_Name,
       last_Name,
       email,
@@ -31,7 +53,20 @@ const Modal = ({ data }) => {
       apply_date,
     };
 
-    console.log("Sending Data:", applicationData);
+    fetch("http://localhost:5000/applied", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(appliedData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          toast.success("Data added to the DB successfully");
+          document.getElementById("my_modal_1").close();
+        }
+      });
   };
 
   return (
@@ -39,8 +74,8 @@ const Modal = ({ data }) => {
       {/* Open the modal using document.getElementById('ID').showModal() method */}
       {/* <button className="btn">open modal</button> */}
       <dialog id="my_modal_1" className="modal ">
-        <div onSubmit={handleAppliedForm} className="modal-box  min-w-max ">
-          <form className="card-body">
+        <div className="modal-box  min-w-max ">
+          <form onSubmit={handleAppliedForm} className="card-body">
             <div className="flex gap-2">
               <div className="form-control">
                 <label className="label">

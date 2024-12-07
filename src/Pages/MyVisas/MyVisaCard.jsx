@@ -11,8 +11,7 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 import { useEffect } from "react";
 import celebrate from "../../assets/icons8-celebrate-48.png";
-
-import { Link } from "react-router-dom";
+import UpdateModal from "../../components/UpdateModal/UpdateModal";
 
 const MyVisaCard = ({ visa, onDelete }) => {
   const {
@@ -26,6 +25,10 @@ const MyVisaCard = ({ visa, onDelete }) => {
     visaType,
     user_email,
   } = visa;
+
+  const handleUpdate = (_id) => {
+    document.getElementById(_id).showModal();
+  };
 
   useEffect(() => {
     AOS.init({ duration: 2000 });
@@ -98,10 +101,11 @@ const MyVisaCard = ({ visa, onDelete }) => {
         <div className="card-actions justify-end mt-4">
           <Fade delay={500} triggerOnce>
             <button
-              onClick={() => document.getElementById("my_modal_4").showModal()}
+              onClick={() => handleUpdate(_id)}
               className="border px-6 py-2 rounded-3xl shadow-md hover:bg-blue-700"
             >
-              <Link to={`/update/${_id}`}>Update</Link>
+              Update
+              {/* <Link to={`/update/${_id}`}>Update</Link> */}
             </button>
           </Fade>
           <Fade delay={500} triggerOnce>
@@ -113,6 +117,7 @@ const MyVisaCard = ({ visa, onDelete }) => {
             </button>
           </Fade>
         </div>
+        <UpdateModal _id={_id} />
       </div>
     </div>
   );

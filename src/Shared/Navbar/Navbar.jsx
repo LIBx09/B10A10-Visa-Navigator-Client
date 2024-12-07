@@ -22,6 +22,9 @@ const Navbar = () => {
       <li>
         <Link to="/addVisa">Add Visa</Link>
       </li>
+      <li>
+        <Link to="/applied">Applied Visa</Link>
+      </li>
     </>
   );
 
