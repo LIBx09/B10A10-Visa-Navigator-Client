@@ -73,7 +73,7 @@ const Navbar = () => {
               src={logo}
               className="rounded-full w-6 h-6 md:w-12 md:h-12 md:ml-5"
             />
-            <a className="btn btn-ghost text-xl dark:text-black text-white">
+            <a className="btn btn-ghost text-sm md:text-xl dark:text-black text-white">
               Dream Visa
             </a>
           </div>
@@ -91,7 +91,7 @@ const Navbar = () => {
                   title={user.displayName}
                   alt="img"
                   src={user.photoURL}
-                  className="rounded-full w-6 h-6 md:w-12 md:w-12"
+                  className="rounded-full w-6 h-6 "
                 />
               )}
             </div>
@@ -108,11 +108,8 @@ const Navbar = () => {
             </button>
           ) : (
             <>
-              <Link to="/signIn" className="btn btn-outline btn-success">
+              <Link to="/signIn" className="btn btn-outline ">
                 Log
-              </Link>
-              <Link to="/signUp" className="btn btn-outline btn-warning">
-                Regis
               </Link>
             </>
           )}

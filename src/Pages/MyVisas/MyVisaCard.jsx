@@ -55,7 +55,7 @@ const MyVisaCard = ({ visa, onDelete }) => {
           <img
             src={photo}
             alt={`${country_name} flag`}
-            className="w-24 h-16 object-cover rounded-lg border-2 border-gray-300"
+            className="w-24 h-16 object-cover rounded-lg border-2 border-gray-300 border"
             data-aos="flip-up"
           />
         </div>

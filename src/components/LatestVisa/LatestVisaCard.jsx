@@ -29,7 +29,7 @@ const LatestVisaCard = ({ visa }) => {
           <img
             src={photo}
             alt={`${country_name} flag`}
-            className="w-24 h-16 object-cover rounded-lg"
+            className="w-24 h-16 object-cover rounded-lg border"
           />
         </div>
         <p className="text-sm text-gray-600 bg-blue-100 px-3 py-1 rounded-full inline-block mb-4">
