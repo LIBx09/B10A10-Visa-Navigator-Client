@@ -3,7 +3,7 @@ import Marquee from "react-fast-marquee";
 
 const MarqueeSlider = () => {
   return (
-    <div className="flex items-center w-11/12 mx-auto">
+    <div className="flex flex-col md:flex-row items-center w-11/12 mx-auto">
       <div className="bg-[#080F28] rounded-lg">
         <div className="flex items-center justify-start h-full">
           <h2 className="text-white font-bold text-3xl p-4">
@@ -11,7 +11,7 @@ const MarqueeSlider = () => {
           </h2>
         </div>
       </div>
-      <div className="bg-neutral-600 w-10/12 h-[50px] bottom-0">
+      <div className="bg-neutral-600 w-10/12 mx h-[50px] bottom-0">
         <Marquee speed={50} gradient={false} pauseOnHover={false}>
           <div className="flex">
             <Fade cascade duration={2000}>
