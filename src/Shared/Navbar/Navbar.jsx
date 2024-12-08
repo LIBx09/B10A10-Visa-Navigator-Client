@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import { useEffect } from "react";
 import { useTheme } from "../../Providers/ThemeProviders";
+import { CiLogout } from "react-icons/ci";
 
 const Navbar = () => {
   const { user, logOut } = useAuth();
@@ -67,7 +68,11 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="flex items-center">
-            <img alt="img" src={logo} className="rounded-full w-12 h-12 ml-5" />
+            <img
+              alt="img"
+              src={logo}
+              className="rounded-full w-6 h-6 md:w-12 md:h-12 md:ml-5"
+            />
             <a className="btn btn-ghost text-xl dark:text-black text-white">
               Dream Visa
             </a>
@@ -80,13 +85,13 @@ const Navbar = () => {
         </div>
         <div className="navbar-end mr-5">
           <div className="flex items-center gap-3">
-            <div className="w-10 mr-5">
+            <div className="w-10  md:mr-5">
               {user && (
                 <img
                   title={user.displayName}
                   alt="img"
                   src={user.photoURL}
-                  className="rounded-full"
+                  className="rounded-full w-6 h-6 md:w-12 md:w-12"
                 />
               )}
             </div>
@@ -99,7 +104,7 @@ const Navbar = () => {
           </div>
           {user ? (
             <button className="btn btn-outline btn-error" onClick={logOut}>
-              SignOut
+              <CiLogout />
             </button>
           ) : (
             <>

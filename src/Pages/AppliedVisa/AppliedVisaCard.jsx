@@ -25,10 +25,13 @@ const AppliedVisaCard = ({ appliedVisa, appliedVisas, setAppliedUsers }) => {
     photo,
     visaType,
     selectedDocuments,
+    first_Name,
+    last_Name,
+    email,
   } = appliedVisa;
+  console.log(appliedVisa);
 
   const handleDelete = (_id) => {
-    // console.log(_id);
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -44,7 +47,6 @@ const AppliedVisaCard = ({ appliedVisa, appliedVisas, setAppliedUsers }) => {
         })
           .then((res) => res.json())
           .then((data) => {
-            // console.log(data);
             if (data.deleteCount > 0) {
               Swal.fire({
                 title: "Deleted!",
@@ -80,38 +82,56 @@ const AppliedVisaCard = ({ appliedVisa, appliedVisas, setAppliedUsers }) => {
           />
         </div>
 
-        {/* Visa Type */}
         <p className="text-sm text-gray-600 bg-blue-100 px-3 py-1 rounded-full inline-block mb-4">
           {visaType}
         </p>
 
-        {/* Description */}
         <p className="text-gray-700 text-sm mb-4">{description}</p>
 
-        {/* Details List */}
-        <ul className="space-y-2">
-          <li className="flex items-center">
-            <FaCalendarAlt className="text-blue-500 mr-2" />
-            <span className="font-medium">Processing Time:</span> {process_time}
-          </li>
-          <li className="flex items-center">
-            <FaGlobe className="text-green-500 mr-2" />
-            <span className="font-medium">Validity:</span> {validity}
-          </li>
-          <li className="flex items-center">
-            <FaMoneyBillWave className="text-yellow-500 mr-2" />
-            <span className="font-medium">Fee:</span> {fee}
-          </li>
-          <li className="flex items-center">
-            <FaFileAlt className="text-purple-500 mr-2" />
-            <span className="font-medium">Age Restriction:</span> {age_limit}+
-          </li>
-          <li className="flex items-center">
-            <FaFileAlt className="text-teal-500 mr-2" />
-            <span className="font-medium">Application Method:</span>{" "}
-            {application_method}
-          </li>
-        </ul>
+        <div className="flex flex-col md:flex-row justify-between">
+          <div>
+            <ul className="space-y-2">
+              <li className="flex items-center">
+                <FaCalendarAlt className="text-blue-500 mr-2" />
+                <span className="font-medium">Processing Time:</span>{" "}
+                {process_time}
+              </li>
+
+              <li className="flex items-center">
+                <FaGlobe className="text-green-500 mr-2" />
+                <span className="font-medium">Validity:</span> {validity}
+              </li>
+
+              <li className="flex items-center">
+                <FaMoneyBillWave className="text-yellow-500 mr-2" />
+                <span className="font-medium">Fee:</span> {fee}
+              </li>
+
+              <li className="flex items-center">
+                <FaFileAlt className="text-purple-500 mr-2" />
+                <span className="font-medium">Age Restriction:</span>{" "}
+                {age_limit}+
+              </li>
+
+              <li className="flex items-center">
+                <FaFileAlt className="text-teal-500 mr-2" />
+                <span className="font-medium">Application Method:</span>{" "}
+                {application_method}
+              </li>
+            </ul>
+          </div>
+          <div className="border-2 p-2 rounded-lg">
+            <h3 className="text-lg md:text-2xl  text text-neutral-500">
+              User Information
+            </h3>
+            <h2 className="text-sm md:text-xl  font-semibold text-black">
+              {first_Name + " " + last_Name}
+            </h2>
+            <h2 className="text-sm md:text-xl font-semibold text-black w">
+              {email}
+            </h2>
+          </div>
+        </div>
 
         {/* Selected Documents */}
         {selectedDocuments && selectedDocuments.length > 0 && (

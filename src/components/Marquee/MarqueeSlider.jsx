@@ -11,7 +11,7 @@ const MarqueeSlider = () => {
           </h2>
         </div>
       </div>
-      <div className="bg-neutral-200 h-[50px] bottom-0">
+      <div className="bg-neutral-600 h-[50px] bottom-0">
         <Marquee speed={50} gradient={false} pauseOnHover={false}>
           <div className="flex">
             <Fade cascade duration={2000}>

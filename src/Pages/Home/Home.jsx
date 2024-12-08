@@ -14,7 +14,7 @@ const Home = () => {
       <section>
         <Banner />
       </section>
-      <section>
+      <section className="py-20">
         <MarqueeSlider />
       </section>
       <section>
