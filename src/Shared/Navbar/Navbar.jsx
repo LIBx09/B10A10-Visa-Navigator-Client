@@ -6,9 +6,6 @@ import { useTheme } from "../../Providers/ThemeProviders";
 
 const Navbar = () => {
   const { user, logOut } = useAuth();
-  // console.log(user);
-  // console.log(import.meta.env.VITE_a);
-
   const { theme, toggleTheme } = useTheme();
 
   const nav = (
@@ -42,7 +39,7 @@ const Navbar = () => {
   }, [theme]);
 
   return (
-    <div className="dark:bg-black bg-white">
+    <div className="dark:bg-white bg-black">
       <div className="navbar ">
         <div className="navbar-start">
           <div className="dropdown">
@@ -64,18 +61,22 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow dark:text-white "
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow "
             >
               {nav}
             </ul>
           </div>
           <div className="flex items-center">
             <img alt="img" src={logo} className="rounded-full w-12 h-12 ml-5" />
-            <a className="btn btn-ghost text-xl dark:text-white">Dream Visa</a>
+            <a className="btn btn-ghost text-xl dark:text-black text-white">
+              Dream Visa
+            </a>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 dark:text-white">{nav}</ul>
+          <ul className="menu menu-horizontal px-1 dark:text-black text-white">
+            {nav}
+          </ul>
         </div>
         <div className="navbar-end mr-5">
           <div className="flex items-center gap-3">

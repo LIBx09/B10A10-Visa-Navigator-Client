@@ -14,7 +14,6 @@ const MyVisas = () => {
   );
 
   const handleDelete = (_id) => {
-    // console.log("Deleting ID:", _id);
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",

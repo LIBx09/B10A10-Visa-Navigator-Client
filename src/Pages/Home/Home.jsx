@@ -1,27 +1,33 @@
 import { useLoaderData } from "react-router-dom";
 import LatestVisa from "../../components/LatestVisa/LatestVisa";
 import Banner from "../../components/Banner/Banner";
+import MarqueeSlider from "../../components/Marquee/MarqueeSlider";
+import Review from "../../components/Review/Review";
+import AboutSection from "../../components/About/AboutSection";
+import QustionSec from "../../components/Qustion/QustionSec";
 
 const Home = () => {
   const visas = useLoaderData();
 
   return (
-    <main>
+    <main className="dark:bg-neutral-200 bg-neutral-800">
       <section>
         <Banner />
       </section>
       <section>
-        <h2>Latest Section</h2>
+        <MarqueeSlider />
+      </section>
+      <section>
         <LatestVisa visas={visas} />
       </section>
       <section>
-        <h2>extra 1</h2>
+        <Review />
       </section>
       <section>
-        <h2>extra 2</h2>
+        <AboutSection />
       </section>
-      <section>
-        <h2>extra 3</h2>
+      <section className="py-20">
+        <QustionSec />
       </section>
     </main>
   );
