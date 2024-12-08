@@ -58,7 +58,7 @@ const SingIn = () => {
           <div>
             <button
               onClick={handleGoogleSignIn}
-              className="btn rounded-full btn-outline btn-accent"
+              className="btn rounded-full btn-ghost"
             >
               Google
             </button>

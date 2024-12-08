@@ -20,7 +20,7 @@ const LatestVisaCard = ({ visa }) => {
   } = visa;
 
   return (
-    <div className="card glass">
+    <div className="card glass text-white">
       <div className="card-body">
         <div className="flex justify-between items-center">
           <h2 className="text-2xl font-bold text-gray-800 mb-2">
@@ -56,10 +56,10 @@ const LatestVisaCard = ({ visa }) => {
         </ul>
 
         <div className="card-actions justify-end">
-          <button className="btn btn-warning">
+          <button className="btn btn-ghost">
             <Link to={`/details/${_id}`}>See Details</Link>
           </button>
-          <button className="btn btn-warning">
+          <button className="btn btn-ghost">
             <Link to="/visa">See All Visa</Link>
           </button>
         </div>
