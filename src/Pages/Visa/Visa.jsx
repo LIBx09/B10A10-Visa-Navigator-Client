@@ -2,11 +2,11 @@ import { useLoaderData } from "react-router-dom";
 import AllVisaCard from "./AllVisaCard";
 import { useState, useEffect } from "react";
 const Visa = () => {
-  const allVisa = useLoaderData(); // Load all visas from the loader
-  const [filteredVisas, setFilteredVisas] = useState(allVisa); // State for filtered visas
-  const [visaTypes, setVisaTypes] = useState([]); // Unique visa types
-  const [selectedType, setSelectedType] = useState("All"); // Selected filter
-  // Extract unique visa types
+  const allVisa = useLoaderData();
+  const [filteredVisas, setFilteredVisas] = useState(allVisa);
+  const [visaTypes, setVisaTypes] = useState([]);
+  const [selectedType, setSelectedType] = useState("All");
+
   useEffect(() => {
     const types = ["All", ...new Set(allVisa.map((visa) => visa.visaType))];
     setVisaTypes(types);
@@ -16,15 +16,14 @@ const Visa = () => {
     const type = event.target.value;
     setSelectedType(type);
     if (type === "All") {
-      setFilteredVisas(allVisa); // Show all visas
+      setFilteredVisas(allVisa);
     } else {
       const filtered = allVisa.filter((visa) => visa.visaType === type);
-      setFilteredVisas(filtered); // Show filtered visas
+      setFilteredVisas(filtered);
     }
   };
   return (
     <div className="w-10/12 mx-auto">
-      {/* Dropdown for Filtering */}
       <div className="flex justify-between items-center mb-5">
         <h1 className="text-2xl font-bold">All Visas</h1>
         <div>
@@ -45,7 +44,6 @@ const Visa = () => {
           </select>
         </div>
       </div>
-      {/* Display Filtered Visas */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
         {filteredVisas.map((visaData) => (
           <AllVisaCard key={visaData._id} data={visaData}></AllVisaCard>

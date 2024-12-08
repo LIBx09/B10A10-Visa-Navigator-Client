@@ -18,24 +18,19 @@ const AllVisaCard = ({ data }) => {
       className="card bg-white shadow-lg rounded-lg overflow-hidden animate__animated animate__fadeInUp "
       data-aos="fade-up"
     >
-      {/* Image Section */}
       <img
         src={photo}
         alt={`${country_name} flag`}
         className="w-full h-40 object-cover"
       />
 
-      {/* Card Body */}
       <div className="p-4">
-        {/* Country Name */}
         <h2 className="text-xl font-bold text-gray-800 mb-2">{country_name}</h2>
 
-        {/* Visa Type */}
         <p className="text-sm text-gray-600 bg-blue-100 px-3 py-1 rounded-full inline-block mb-3">
           {visaType}
         </p>
 
-        {/* Details */}
         <ul className="space-y-1 text-sm text-gray-700">
           <li className="flex items-center">
             <FaCalendarAlt className="text-blue-500 mr-2" />
@@ -48,7 +43,6 @@ const AllVisaCard = ({ data }) => {
         </ul>
       </div>
 
-      {/* Footer */}
       <div className="p-4 bg-gray-100 text-center">
         <button className="btn btn-outline btn-primary w-full">
           <Link to={`/details/${_id}`}> See Details</Link>
