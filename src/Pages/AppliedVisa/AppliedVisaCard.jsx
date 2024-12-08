@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   FaMoneyBillWave,
   FaCalendarAlt,
@@ -10,8 +10,9 @@ import {
 import "animate.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Swal from "sweetalert2";
 
-const AppliedVisaCard = ({ appliedVisa }) => {
+const AppliedVisaCard = ({ appliedVisa, appliedVisas, setAppliedUsers }) => {
   const {
     _id,
     country_name,
@@ -27,7 +28,35 @@ const AppliedVisaCard = ({ appliedVisa }) => {
   } = appliedVisa;
 
   const handleDelete = (_id) => {
-    console.log(_id);
+    // console.log(_id);
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`https://visa-navigator-server-dun.vercel.app/applied/${_id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            // console.log(data);
+            if (data.deleteCount > 0) {
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your file has been deleted.",
+                icon: "success",
+              });
+            }
+            const remaining = appliedVisas.filter((visa) => visa._id !== _id);
+            setAppliedUsers(remaining);
+          });
+      }
+    });
   };
 
   useEffect(() => {

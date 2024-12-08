@@ -20,7 +20,7 @@ const UpdateModal = ({ _id }) => {
     application_method,
     photo,
   } = forUpdateVisa;
-  console.log(forUpdateVisa);
+  // console.log(forUpdateVisa);
 
   const handleVisaType = (e) => {
     setVisaType(e.target.value);
@@ -60,11 +60,9 @@ const UpdateModal = ({ _id }) => {
       visaType,
       selectedDocuments,
     };
-    console.log(updateVisa);
+    // console.log(updateVisa);
 
-    //send data to the server
-
-    fetch(`http://localhost:5000/visa/${_id}`, {
+    fetch(`https://visa-navigator-server-dun.vercel.app/visa/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -73,7 +71,7 @@ const UpdateModal = ({ _id }) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data.insertedId) {
           Swal.fire({
             title: "Success!",

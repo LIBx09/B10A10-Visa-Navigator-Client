@@ -21,12 +21,12 @@ const ResetPass = () => {
 
     forgetPassword(email)
       .then((res) => {
-        console.log(res);
+        setEmail(res);
         navigate("/signIn");
         toast.success("Password reset email sent successfully!");
       })
       .catch((error) => {
-        console.error(error);
+        setEmail(error);
         toast.error("Failed to send reset email. Please try again.");
       });
   };

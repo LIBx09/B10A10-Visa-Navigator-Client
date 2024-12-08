@@ -8,12 +8,13 @@ import { useState } from "react";
 const MyVisas = () => {
   const myVisa = useLoaderData();
   const { user } = useAuth();
+
   const [filteredVisas, setFilteredVisas] = useState(
     myVisa.filter((visa) => visa.user_email === user.email)
   );
 
   const handleDelete = (_id) => {
-    console.log("Deleting ID:", _id);
+    // console.log("Deleting ID:", _id);
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -24,7 +25,7 @@ const MyVisas = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/visa/${_id}`, {
+        fetch(`https://visa-navigator-server-dun.vercel.app/visa/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

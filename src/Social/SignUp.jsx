@@ -10,7 +10,7 @@ const SignUp = () => {
   const handleGoogleSignIn = () => {
     googleSignin()
       .then((res) => {
-        console.log(res);
+        setUser(res);
         navigate("/");
         toast.success("Successfully logged in with Google!");
       })
@@ -27,7 +27,7 @@ const SignUp = () => {
     const password = form.password.value;
     const name = form.name.value;
     const photo = form.name.value;
-    console.log(email, password, name, photo);
+    // console.log(email, password, name, photo);
 
     if (name.length < 4) {
       toast.error("Your Name should Have at least 4 character");
@@ -57,7 +57,7 @@ const SignUp = () => {
         const newUser = { name, email, photo };
 
         //save new user info to the data base.
-        fetch("http://localhost:5000/users", {
+        fetch("https://visa-navigator-server-dun.vercel.app/users", {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -66,7 +66,7 @@ const SignUp = () => {
         })
           .then((res) => res.json())
           .then((data) => {
-            console.log(data);
+            // console.log(data);
             if (data.insertedId) {
               toast.success("Data added to the DB successfully");
             }

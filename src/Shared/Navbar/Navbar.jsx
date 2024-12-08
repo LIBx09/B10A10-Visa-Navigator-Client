@@ -1,3 +1,4 @@
+import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import { useEffect } from "react";
@@ -5,6 +6,8 @@ import { useTheme } from "../../Providers/ThemeProviders";
 
 const Navbar = () => {
   const { user, logOut } = useAuth();
+  // console.log(user);
+  // console.log(import.meta.env.VITE_a);
 
   const { theme, toggleTheme } = useTheme();
 
@@ -19,9 +22,11 @@ const Navbar = () => {
       <li>
         <Link to="/myVisa">My visa</Link>
       </li>
+
       <li>
         <Link to="/addVisa">Add Visa</Link>
       </li>
+
       <li>
         <Link to="/applied">Applied Visa</Link>
       </li>
@@ -64,13 +69,26 @@ const Navbar = () => {
               {nav}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl dark:text-white">Dream Visa</a>
+          <div className="flex items-center">
+            <img alt="img" src={logo} className="rounded-full w-12 h-12 ml-5" />
+            <a className="btn btn-ghost text-xl dark:text-white">Dream Visa</a>
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 dark:text-white">{nav}</ul>
         </div>
-        <div className="navbar-end">
-          <div>
+        <div className="navbar-end mr-5">
+          <div className="flex items-center gap-3">
+            <div className="w-10 mr-5">
+              {user && (
+                <img
+                  title={user.displayName}
+                  alt="img"
+                  src={user.photoURL}
+                  className="rounded-full"
+                />
+              )}
+            </div>
             <input
               type="checkbox"
               onClick={toggleTheme}

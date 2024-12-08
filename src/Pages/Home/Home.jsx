@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import LatestVisa from "../../components/LatestVisa/LatestVisa";
+import Banner from "../../components/Banner/Banner";
 
 const Home = () => {
   const visas = useLoaderData();
@@ -7,7 +8,7 @@ const Home = () => {
   return (
     <main>
       <section>
-        <h2>Banner</h2>
+        <Banner />
       </section>
       <section>
         <h2>Latest Section</h2>

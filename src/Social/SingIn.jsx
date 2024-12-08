@@ -29,7 +29,7 @@ const SingIn = () => {
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(email, password);
+    // console.log(email, password);
 
     signIn(email, password)
       .then((res) => {
@@ -39,7 +39,7 @@ const SingIn = () => {
         toast.success("Successfully Login");
       })
       .catch((error) => {
-        console.log(error.code);
+        // console.log(error.code);
 
         if (password.length < 5) {
           toast.error("Password length ares not matched");

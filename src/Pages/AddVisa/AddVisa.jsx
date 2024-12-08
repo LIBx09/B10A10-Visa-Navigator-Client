@@ -46,11 +46,10 @@ const AddVisa = () => {
       visaType,
       selectedDocuments,
     };
-    console.log(newVisa);
 
     //send data to the server
 
-    fetch("http://localhost:5000/visa", {
+    fetch("https://visa-navigator-server-dun.vercel.app/visa", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -59,7 +58,6 @@ const AddVisa = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.insertedId) {
           toast.success("Data added to the DB successfully");
         }
@@ -252,7 +250,7 @@ const AddVisa = () => {
             </div>
           </div>
         </div>
-        <input type="submit" value="Add Coffee" className="btn btn-block" />
+        <input type="submit" value="Add Visa" className="btn btn-block" />
       </form>
     </div>
   );

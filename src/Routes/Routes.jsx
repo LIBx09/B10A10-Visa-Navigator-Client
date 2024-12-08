@@ -22,12 +22,14 @@ const routes = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("http://localhost:5000/visa/limit"),
+        loader: () =>
+          fetch("https://visa-navigator-server-dun.vercel.app/visa/limit"),
       },
       {
         path: "/visa",
         element: <Visa />,
-        loader: () => fetch("http://localhost:5000/visa"),
+        loader: () =>
+          fetch("https://visa-navigator-server-dun.vercel.app/visa"),
       },
       {
         path: "/details/:id",
@@ -37,7 +39,9 @@ const routes = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/visa/${params.id}`),
+          fetch(
+            `https://visa-navigator-server-dun.vercel.app/visa/${params.id}`
+          ),
       },
       {
         path: "myVisa",
@@ -46,7 +50,8 @@ const routes = createBrowserRouter([
             <MyVisas />
           </PrivateRoutes>
         ),
-        loader: () => fetch("http://localhost:5000/visa"),
+        loader: () =>
+          fetch("https://visa-navigator-server-dun.vercel.app/visa"),
       },
       {
         path: "/update/:id",
@@ -56,7 +61,9 @@ const routes = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/visa/${params.id}`),
+          fetch(
+            `https://visa-navigator-server-dun.vercel.app/visa/${params.id}`
+          ),
       },
       {
         path: "/applied",
@@ -65,7 +72,8 @@ const routes = createBrowserRouter([
             <AppliedVisa />
           </PrivateRoutes>
         ),
-        loader: () => fetch("http://localhost:5000/applied"),
+        loader: () =>
+          fetch("https://visa-navigator-server-dun.vercel.app/applied"),
       },
       {
         path: "/signIn",
@@ -81,7 +89,11 @@ const routes = createBrowserRouter([
       },
       {
         path: "/addVisa",
-        element: <AddVisa />,
+        element: (
+          <PrivateRoutes>
+            <AddVisa />
+          </PrivateRoutes>
+        ),
       },
     ],
   },
