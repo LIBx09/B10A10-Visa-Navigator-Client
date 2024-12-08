@@ -57,10 +57,16 @@ const Banner = () => {
             alt="Slide 1"
           />
           <div className="absolute left-5 right-5 top-1/2 transform -translate-y-1/2 flex justify-between z-20">
-            <a href="#slide4" className="btn btn-circle">
+            <a
+              href="#slide4"
+              className="btn btn-circle w-6 h-6 md:w-12 md:h-12"
+            >
               ❮
             </a>
-            <a href="#slide2" className="btn btn-circle">
+            <a
+              href="#slide2"
+              className="btn btn-circle w-6 h-6 md:w-12 md:h-12"
+            >
               ❯
             </a>
           </div>
@@ -72,10 +78,16 @@ const Banner = () => {
             alt="Slide 2"
           />
           <div className="absolute left-5 right-5 top-1/2 transform -translate-y-1/2 flex justify-between z-20">
-            <a href="#slide1" className="btn btn-circle">
+            <a
+              href="#slide1"
+              className="btn btn-circle w-6 h-6 md:w-12 md:h-12"
+            >
               ❮
             </a>
-            <a href="#slide3" className="btn btn-circle">
+            <a
+              href="#slide3"
+              className="btn btn-circle w-6 h-6 md:w-12 md:h-12"
+            >
               ❯
             </a>
           </div>
@@ -87,10 +99,16 @@ const Banner = () => {
             alt="Slide 3"
           />
           <div className="absolute left-5 right-5 top-1/2 transform -translate-y-1/2 flex justify-between z-20">
-            <a href="#slide2" className="btn btn-circle">
+            <a
+              href="#slide2"
+              className="btn btn-circle w-6 h-6 md:w-12 md:h-12"
+            >
               ❮
             </a>
-            <a href="#slide4" className="btn btn-circle">
+            <a
+              href="#slide4"
+              className="btn btn-circle w-6 h-6 md:w-12 md:h-12"
+            >
               ❯
             </a>
           </div>
@@ -102,10 +120,16 @@ const Banner = () => {
             alt="Slide 4"
           />
           <div className="absolute left-5 right-5 top-1/2 transform -translate-y-1/2 flex justify-between z-20">
-            <a href="#slide3" className="btn btn-circle">
+            <a
+              href="#slide3"
+              className="btn btn-circle w-6 h-6 md:w-12 md:h-12"
+            >
               ❮
             </a>
-            <a href="#slide1" className="btn btn-circle">
+            <a
+              href="#slide1"
+              className="btn btn-circle w-6 h-6 md:w-12 md:h-12"
+            >
               ❯
             </a>
           </div>
