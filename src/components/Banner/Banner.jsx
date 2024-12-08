@@ -6,6 +6,7 @@ import bgb1 from "../../assets/bgb1.jpg";
 import bgb22 from "../../assets/bgb2a2.jpg";
 import bgb3 from "../../assets/bgb3.jpg";
 import bgb4 from "../../assets/bgb4.webp";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -39,7 +40,7 @@ const Banner = () => {
           </h2>
           <div className="flex gap-3 mt-4 pointer-events-auto">
             <button className="btn bg-orange-500 text-white hover:bg-orange-600">
-              Explore Now
+              <Link to="/visa">Explore More</Link>
             </button>
             <button className="btn text-orange-500 border border-orange-500 hover:text-white hover:bg-orange-500">
               WATCH INTRO
