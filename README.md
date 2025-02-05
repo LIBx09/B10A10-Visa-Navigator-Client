@@ -53,7 +53,7 @@ The backend is built with **Express.js** and **MongoDB**, while the frontend is 
 
 ### **1️⃣ Clone the Repository:**  
 ```sh
-git clone https://github.com/yourusername/visa-navigator.git  
+git clone https://github.com/LIBx09/B10A10-Visa-Navigator-Client
 cd visa-navigator  
 ```
 
