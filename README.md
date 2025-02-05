@@ -1,4 +1,7 @@
 
+```md  
+![Visa Navigator]([https://yourimageurl.com/visa-nav.png](https://i.postimg.cc/brn4kDnw/Visa-nav.png))  
+```  
 
 # Live Link : https://visa-navigator-6e2d7.web.app/
 
@@ -13,97 +16,115 @@ Here is your `README.md` file in Markdown format:
 ```markdown
 # Visa Navigator - Visa Application System
 
-## Table of Contents
+You're absolutely right! Exposing **environment variables** publicly is a security risk. I’ll update the **README.md** to remove the actual keys and provide instructions on how users should configure their own `.env.local` file.  
 
-- [Introduction](#introduction)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Dependencies](#dependencies)
-- [Configuration](#configuration)
-- [License](#license)
-
-## Features
-
-- User-friendly interface for submitting visa applications.
-- Real-time form validation and error handling.
-- Secure authentication and authorization using Firebase.
-- Dynamic and animated UI elements with animations and transitions.
-- Notification system for user updates using React Toastify.
-- Responsive design powered by Tailwind CSS and DaisyUI.
-
-## Tech Stack
-
-- **Frontend:** React, React Router, Tailwind CSS, DaisyUI
-- **Backend:** Node.js, Express.js
-- **Database:** MongoDB
-- **Authentication:** Firebase
-- **Build Tool:** Vite
-
-## Installation
-
-To set up the project locally, follow these steps:
-
-1. **Clone the repository**:
-   ```sh
-   git clone https://github.com/your-username/visa-navigator.git
-   cd visa-navigator
-   ```
-
-2. **Install dependencies**:
-   ```sh
-   npm install
-   ```
-
-3. **Start the development server**:
-   ```sh
-   npm run dev
-   ```
-
-## Usage
-
-- Run `npm run dev` to start the development server.
-- Build the project using `npm run build`.
-- Use `npm run preview` to preview the production build.
-- Lint the code with `npm run lint`.
-
-## Dependencies
-
-### Main Dependencies
-- React (`^18.3.1`)
-- React Router DOM (`^7.0.2`)
-- Firebase (`^11.0.2`)
-- Tailwind CSS (`^3.4.15`)
-- DaisyUI (`^4.12.14`)
-- React Toastify (`^10.0.6`)
-- Lottie React (`^2.4.0`)
-- Animate.css (`^4.1.1`)
-- AOS (`^2.3.4`)
-
-### Development Dependencies
-- Vite (`^6.0.1`)
-- ESLint (`^9.15.0`)
-- PostCSS (`^8.4.49`)
-- Autoprefixer (`^10.4.20`)
-
-## Configuration
-
-- Firebase authentication should be configured with your own API keys.
-- Environment variables should be stored in a `.env` file.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+Also, I’ll include **a better project description** and guide you on how to add an image to your README. Here’s the improved version:
 
 ---
 
-Made with ❤️ by [Your Name](https://github.com/your-username)
-```
+# 🛂 Visa Navigator  
 
-### Notes:
-- Replace `https://github.com/your-username/visa-navigator.git` with the actual repository URL.
-- Add your name and GitHub profile link at the end.
-- If you have backend dependencies, include them as well.
+**A user-friendly web platform for checking visa requirements, applying online, and tracking applications seamlessly.**  
 
-Let me know if you need any modifications! 🚀
+![Visa Navigator](Visa%20nav.png)  
+
+## 📌 Table of Contents  
+- [Introduction](#-introduction)  
+- [Features](#-features)  
+- [Installation](#-installation)  
+- [Environment Variables](#-environment-variables)  
+- [Usage](#-usage)  
+- [Dependencies](#-dependencies)  
+- [Development](#-development)  
+- [Adding an Image](#-adding-an-image)  
+- [License](#-license)  
+
+## 🚀 Introduction  
+
+Visa Navigator is a **modern**, **responsive**, and **interactive** web application designed to:  
+✅ Help users check visa requirements for different countries.  
+✅ Allow seamless **online visa applications**.  
+✅ Enable users to **track visa application status** in real time.  
+✅ Provide a **secure authentication system** using Firebase.  
+✅ Offer a **smooth user experience** with animations and a clean UI.  
+
+This project aims to **simplify the immigration process** by providing a streamlined and accessible visa application system.  
+
+## 🎯 Features  
+✔ **Visa Requirement Checker** – Get instant information on visa policies.  
+✔ **Online Visa Application** – Easily apply for visas through the platform.  
+✔ **Application Tracking** – Monitor the status of your visa applications.  
+✔ **Secure User Authentication** – Firebase-based login system.  
+✔ **Interactive UI** – Engaging animations with **Lottie, AOS, and React libraries**.  
+✔ **Dark Mode Support** – Switch between light and dark themes effortlessly.  
+
+## 🛠️ Installation  
+
+### 1️⃣ Clone the Repository:  
+```sh  
+git clone https://github.com/yourusername/visa-navigator.git  
+cd visa-navigator  
+```  
+
+### 2️⃣ Install Dependencies:  
+```sh  
+npm install  
+```  
+
+### 3️⃣ Set Up Environment Variables:  
+
+Create a `.env.local` file in the root directory and add the following (**Do NOT share your API keys!**):  
+
+```ini  
+VITE_apiKey=api_key_here  
+VITE_authDomain=domain_here  
+VITE_projectId=project_id_here  
+VITE_storageBucket=storage_bucket_here  
+VITE_messagingSender_Id= messaging_sender_id_here  
+VITE_appId=app_id_here  
+```  
+
+🔒 **Important:** Keep this file **private** and never commit it to GitHub! You can add `.env.local` to `.gitignore` to prevent accidental leaks.  
+
+### 4️⃣ Start the Development Server:  
+```sh  
+npm run dev  
+```  
+The application will be available at **`http://localhost:5173/`**.  
+
+## 🔑 Dependencies  
+
+### Core Dependencies:  
+- **React** – Frontend framework  
+- **React Router DOM** – Routing library  
+- **Firebase** – Authentication & backend services  
+
+### UI Enhancements:  
+- **TailwindCSS & DaisyUI** – Styling & UI components  
+- **Animate.css, AOS, Lottie-React** – Smooth animations  
+- **React Icons & React Toastify** – UI & notifications  
+
+### Development Tools:  
+- **Vite** – Fast development bundler  
+- **ESLint & Prettier** – Code linting & formatting  
+
+## 🔧 Development  
+
+### Running in Development Mode:  
+```sh  
+npm run dev  
+```  
+
+### Building for Production:  
+```sh  
+npm run build  
+```  
+
+### Running ESLint:  
+```sh  
+npm run lint  
+
+
+## 📜 License  
+
+This project is licensed under the **MIT License**.  
