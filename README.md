@@ -1,117 +1,147 @@
 ![Visa Navigator](https://github.com/LIBx09/B10A10-Visa-Navigator-Client/blob/main/Visa%20nav.png?raw=true)
- 
+
 
 # Live Link : https://visa-navigator-6e2d7.web.app/
 
 ## Visa Application Project
 
-# Overview
+#  Project overview
 
 This project is a comprehensive Visa Application System built with the MERN stack (MongoDB, Express.js, React, and Node.js). The system is designed to simplify and streamline the visa application process, providing users with an intuitive interface and powerful backend features.
 
-Here is your `README.md` file in Markdown format:  
-
-```markdown
-# Visa Navigator - Visa Application System
-
-You're absolutely right! Exposing **environment variables** publicly is a security risk. I’ll update the **README.md** to remove the actual keys and provide instructions on how users should configure their own `.env.local` file.  
-
-Also, I’ll include **a better project description** and guide you on how to add an image to your README. Here’s the improved version:
-
 ---
-
-# 🛂 Visa Navigator  
-
-**A user-friendly web platform for checking visa requirements, applying online, and tracking applications seamlessly.**  
 
 ![Visa Navigator](Visa%20nav.png)  
 
-## 🚀 Introduction  
+---
 
-Visa Navigator is a **modern**, **responsive**, and **interactive** web application designed to:  
-✅ Help users check visa requirements for different countries.  
-✅ Allow seamless **online visa applications**.  
-✅ Enable users to **track visa application status** in real time.  
-✅ Provide a **secure authentication system** using Firebase.  
-✅ Offer a **smooth user experience** with animations and a clean UI.  
+## 🚀 **Introduction**  
 
-This project aims to **simplify the immigration process** by providing a streamlined and accessible visa application system.  
+**Visa Navigator** is a **full-stack** web application designed to help users:  
+✅ **Check visa requirements**  
+✅ **Apply for visas online**  
+✅ **Track application status**  
+✅ **Securely manage user data** with a backend server  
 
-## 🎯 Features  
-✔ **Visa Requirement Checker** – Get instant information on visa policies.  
-✔ **Online Visa Application** – Easily apply for visas through the platform.  
-✔ **Application Tracking** – Monitor the status of your visa applications.  
-✔ **Secure User Authentication** – Firebase-based login system.  
-✔ **Interactive UI** – Engaging animations with **Lottie, AOS, and React libraries**.  
-✔ **Dark Mode Support** – Switch between light and dark themes effortlessly.  
+The backend is built with **Express.js** and **MongoDB**, while the frontend is developed using **React, Firebase, and TailwindCSS**.  
 
-## 🛠️ Installation  
+---
 
-### 1️⃣ Clone the Repository:  
-```sh  
+## 🎯 **Features**  
+✔ **Visa Requirement Checker** – Find visa policies for different countries.  
+✔ **Online Visa Application** – Easily apply for visas.  
+✔ **Application Tracking** – Monitor application progress.  
+✔ **Secure Authentication** – Firebase login & protected API routes.  
+✔ **Full-Stack Functionality** – Built with **Express.js and MongoDB**.  
+✔ **Interactive UI** – Smooth animations & modern design.  
+
+---
+
+## 🛠 **Technologies Used**  
+### **Frontend** (Client)  
+- **React** – UI library  
+- **React Router DOM** – Navigation  
+- **Firebase** – Authentication & backend services  
+- **TailwindCSS & DaisyUI** – Styling  
+- **Lottie, AOS, React Icons** – Animations & UI elements  
+
+### **Backend** (Server)  
+- **Node.js & Express.js** – Server framework  
+- **MongoDB** – Database for storing visa applications  
+- **Dotenv** – Environment variable management  
+- **CORS** – Handling cross-origin requests  
+
+---
+
+## 📦 **Installation**  
+
+### **1️⃣ Clone the Repository:**  
+```sh
 git clone https://github.com/yourusername/visa-navigator.git  
 cd visa-navigator  
-```  
+```
 
-### 2️⃣ Install Dependencies:  
-```sh  
-npm install  
-```  
+### **2️⃣ Install Dependencies:**  
+```sh
+npm install
+```
 
-### 3️⃣ Set Up Environment Variables:  
+### **3️⃣ Set Up Environment Variables:**  
+Create a `.env.local` file for the **frontend**:  
+```ini
+VITE_apiKey=your_api_key_here  
+VITE_authDomain=your_auth_domain_here  
+VITE_projectId=your_project_id_here  
+VITE_storageBucket=your_storage_bucket_here  
+VITE_messagingSenderId=your_messaging_sender_id_here  
+VITE_appId=your_app_id_here  
+```
+🚨 **Important:** Never expose API keys publicly!  
 
-Create a `.env.local` file in the root directory and add the following (**Do NOT share your API keys!**):  
+---
 
-```ini  
-VITE_apiKey=api_key_here  
-VITE_authDomain=domain_here  
-VITE_projectId=project_id_here  
-VITE_storageBucket=storage_bucket_here  
-VITE_messagingSender_Id= messaging_sender_id_here  
-VITE_appId=app_id_here  
-```  
+## 🌐 **Backend Setup**  
 
-🔒 **Important:** Keep this file **private** and never commit it to GitHub! You can add `.env.local` to `.gitignore` to prevent accidental leaks.  
+### **1️⃣ Navigate to the Backend Folder**  
+```sh
+cd backend
+```
 
-### 4️⃣ Start the Development Server:  
-```sh  
-npm run dev  
-```  
-The application will be available at **`http://localhost:5173/`**.  
+### **2️⃣ Install Backend Dependencies**  
+```sh
+npm install
+```
 
-## 🔑 Dependencies  
+### **3️⃣ Set Up Backend Environment Variables**  
+Create a `.env` file in the backend folder:  
+```ini
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+```
 
-### Core Dependencies:  
-- **React** – Frontend framework  
-- **React Router DOM** – Routing library  
-- **Firebase** – Authentication & backend services  
+### **4️⃣ Start the Backend Server**  
+```sh
+npm start
+```
+This will start the server at `http://localhost:5000/`.  
 
-### UI Enhancements:  
-- **TailwindCSS & DaisyUI** – Styling & UI components  
-- **Animate.css, AOS, Lottie-React** – Smooth animations  
-- **React Icons & React Toastify** – UI & notifications  
+---
 
-### Development Tools:  
-- **Vite** – Fast development bundler  
-- **ESLint & Prettier** – Code linting & formatting  
+## 🔑 **Dependencies**  
 
-## 🔧 Development  
+### **Frontend Dependencies:**  
+- **React, React Router DOM** – UI & navigation  
+- **Firebase** – Authentication  
+- **TailwindCSS & DaisyUI** – Styling  
+- **Lottie, AOS, React Icons** – Animations  
 
-### Running in Development Mode:  
-```sh  
-npm run dev  
-```  
+### **Backend Dependencies:**  
+- **Express.js** – Server framework  
+- **MongoDB** – NoSQL database  
+- **Dotenv** – Secure environment variables  
+- **CORS** – Cross-Origin Resource Sharing  
 
-### Building for Production:  
-```sh  
-npm run build  
-```  
+---
 
-### Running ESLint:  
-```sh  
-npm run lint  
+## 🛠 **Development**  
 
+### **Run the Frontend**  
+```sh
+npm run dev
+```
 
-## 📜 License  
+### **Run the Backend**  
+```sh
+npm start
+```
 
+### **Build the Project for Production**  
+```sh
+npm run build
+```
+
+---
+
+## 📜 **License**  
 This project is licensed under the **MIT License**.  
+---
