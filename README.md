@@ -1,4 +1,4 @@
-![Visa Navigator](https://github.com/LIBx09/B10A10-Visa-Navigator-Client/blob/main/Visa%20nav.png?raw=true)
+![Visa Navigator](Visa%20nav.png)  
 
 
 # Live Link : https://visa-navigator-6e2d7.web.app/
@@ -9,11 +9,7 @@
 
 This project is a comprehensive Visa Application System built with the MERN stack (MongoDB, Express.js, React, and Node.js). The system is designed to simplify and streamline the visa application process, providing users with an intuitive interface and powerful backend features.
 
----
 
-![Visa Navigator](Visa%20nav.png)  
-
----
 
 ## 🚀 **Introduction**  
 
