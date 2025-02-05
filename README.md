@@ -26,17 +26,6 @@ Also, I’ll include **a better project description** and guide you on how to ad
 
 ![Visa Navigator](Visa%20nav.png)  
 
-## 📌 Table of Contents  
-- [Introduction](#-introduction)  
-- [Features](#-features)  
-- [Installation](#-installation)  
-- [Environment Variables](#-environment-variables)  
-- [Usage](#-usage)  
-- [Dependencies](#-dependencies)  
-- [Development](#-development)  
-- [Adding an Image](#-adding-an-image)  
-- [License](#-license)  
-
 ## 🚀 Introduction  
 
 Visa Navigator is a **modern**, **responsive**, and **interactive** web application designed to:  
