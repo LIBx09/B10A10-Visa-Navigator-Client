@@ -1,5 +1,5 @@
-
- ![image alt([i](https://github.com/LIBx09/B10A10-Visa-Navigator-Client/blob/7c64dec89e3273fc06a94adb340b5c5e58dd2e99/Visa%20nav.png))]
+![Visa Navigator]([i](https://github.com/LIBx09/B10A10-Visa-Navigator-Client/blob/7c64dec89e3273fc06a94adb340b5c5e58dd2e99/Visa%20nav.png))
+ 
 
 # Live Link : https://visa-navigator-6e2d7.web.app/
 
