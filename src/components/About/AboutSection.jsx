@@ -5,7 +5,7 @@ import about from "../../assets/about.png";
 const AboutSection = () => {
   return (
     <section className="about-section bg-gray-100 py-16">
-      <div className="container mx-auto px-6">
+      <div className="w-10/12 mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between space-x-12 ">
           <Fade left duration={1000}>
             <div className="">

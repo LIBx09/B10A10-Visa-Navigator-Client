@@ -7,7 +7,7 @@ const Review = () => {
     <div className="bg-[#080F28]">
       <div className="my-5">
         <div className="flex justify-center py-10">
-          <h4 className="text-white p-2 border font-bold border-yellow-400 w-fit">
+          <h4 className="text-white p-4 border font-bold border-yellow-400 w-fit">
             Client Feedbacks
           </h4>
         </div>
@@ -19,13 +19,13 @@ const Review = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-10/12 mx-auto p-10">
         <div>
-          <div className="card glass w-64">
-            <p className="text-white p-2 text-center">
+          <div className="card glass">
+            <p className="text-white p-4 text-center">
               What a remarkable experience! Vizago not only provided valuable
               insights into different visa options but also assisted me in
               choosing the best path.
             </p>
-            <div className="rating p-2 flex justify-center">
+            <div className="rating p-4 flex justify-center">
               <input
                 type="radio"
                 name="rating-2"
@@ -63,13 +63,13 @@ const Review = () => {
           </div>
         </div>
         <div>
-          <div className="card glass w-64">
-            <p className="text-white p-2 text-center">
+          <div className="card glass">
+            <p className="text-white p-4 text-center">
               What a remarkable experience! Vizago not only provided valuable
               insights into different visa options but also assisted me in
               choosing the best path.
             </p>
-            <div className="rating p-2 flex justify-center">
+            <div className="rating p-4 flex justify-center">
               <input
                 type="radio"
                 name="rating-2"
@@ -107,13 +107,13 @@ const Review = () => {
           </div>
         </div>
         <div>
-          <div className="card glass w-64">
-            <p className="text-white p-2 text-center">
+          <div className="card glass">
+            <p className="text-white p-4 text-center">
               What a remarkable experience! Vizago not only provided valuable
               insights into different visa options but also assisted me in
               choosing the best path.
             </p>
-            <div className="rating p-2 flex justify-center">
+            <div className="rating p-4 flex justify-center">
               <input
                 type="radio"
                 name="rating-2"
@@ -151,13 +151,13 @@ const Review = () => {
           </div>
         </div>
         <div>
-          <div className="card glass w-64">
-            <p className="text-white p-2 text-center">
+          <div className="card glass">
+            <p className="text-white p-4 text-center">
               What a remarkable experience! Vizago not only provided valuable
               insights into different visa options but also assisted me in
               choosing the best path.
             </p>
-            <div className="rating p-2 flex justify-center">
+            <div className="rating p-4 flex justify-center">
               <input
                 type="radio"
                 name="rating-2"
@@ -195,13 +195,13 @@ const Review = () => {
           </div>
         </div>
         <div>
-          <div className="card glass w-64">
-            <p className="text-white p-2 text-center">
+          <div className="card glass">
+            <p className="text-white p-4 text-center">
               What a remarkable experience! Vizago not only provided valuable
               insights into different visa options but also assisted me in
               choosing the best path.
             </p>
-            <div className="rating p-2 flex justify-center">
+            <div className="rating p-4 flex justify-center">
               <input
                 type="radio"
                 name="rating-2"
@@ -239,13 +239,13 @@ const Review = () => {
           </div>
         </div>
         <div>
-          <div className="card glass w-64">
-            <p className="text-white p-2 text-center">
+          <div className="card glass">
+            <p className="text-white p-4 text-center">
               What a remarkable experience! Vizago not only provided valuable
               insights into different visa options but also assisted me in
               choosing the best path.
             </p>
-            <div className="rating p-2 flex justify-center">
+            <div className="rating p-4 flex justify-center">
               <input
                 type="radio"
                 name="rating-2"
