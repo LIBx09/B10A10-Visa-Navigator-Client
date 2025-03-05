@@ -16,9 +16,7 @@ const AppliedVisa = () => {
   );
 
   useEffect(() => {
-    fetch(
-      `https://visa-navigator-server-dun.vercel.app/applied?searchCountry=${search}`
-    )
+    fetch(`http://localhost:5000/applied?searchCountry=${search}`)
       .then((res) => res.json())
       .then((data) => {
         setAppliedUsers(data);

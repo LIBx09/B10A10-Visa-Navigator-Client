@@ -22,14 +22,12 @@ const routes = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () =>
-          fetch("https://visa-navigator-server-dun.vercel.app/visa/limit"),
+        loader: () => fetch("http://localhost:5000/visa/limit"),
       },
       {
         path: "/visa",
         element: <Visa />,
-        loader: () =>
-          fetch("https://visa-navigator-server-dun.vercel.app/visa"),
+        loader: () => fetch("http://localhost:5000/visa"),
       },
       {
         path: "/details/:id",
@@ -39,9 +37,7 @@ const routes = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(
-            `https://visa-navigator-server-dun.vercel.app/visa/${params.id}`
-          ),
+          fetch(`http://localhost:5000/visa/${params.id}`),
       },
       {
         path: "myVisa",
@@ -50,8 +46,7 @@ const routes = createBrowserRouter([
             <MyVisas />
           </PrivateRoutes>
         ),
-        loader: () =>
-          fetch("https://visa-navigator-server-dun.vercel.app/visa"),
+        loader: () => fetch("http://localhost:5000/visa"),
       },
       {
         path: "/update/:id",
@@ -61,9 +56,7 @@ const routes = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(
-            `https://visa-navigator-server-dun.vercel.app/visa/${params.id}`
-          ),
+          fetch(`http://localhost:5000/visa/${params.id}`),
       },
       {
         path: "/applied",
@@ -72,8 +65,7 @@ const routes = createBrowserRouter([
             <AppliedVisa />
           </PrivateRoutes>
         ),
-        loader: () =>
-          fetch("https://visa-navigator-server-dun.vercel.app/applied"),
+        loader: () => fetch("http://localhost:5000/applied"),
       },
       {
         path: "/signIn",

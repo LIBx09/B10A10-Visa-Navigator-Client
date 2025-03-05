@@ -57,7 +57,7 @@ const SignUp = () => {
         const newUser = { name, email, photo };
 
         //save new user info to the data base.
-        fetch("https://visa-navigator-server-dun.vercel.app/users", {
+        fetch("http://localhost:5000/users", {
           method: "POST",
           headers: {
             "content-type": "application/json",

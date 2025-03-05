@@ -49,7 +49,7 @@ const AddVisa = () => {
 
     //send data to the server
 
-    fetch("https://visa-navigator-server-dun.vercel.app/visa", {
+    fetch("http://localhost:5000/visa", {
       method: "POST",
       headers: {
         "content-type": "application/json",

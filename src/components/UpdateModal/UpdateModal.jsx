@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 
 const UpdateModal = ({ _id }) => {
   const forUpdateVisa = useLoaderData();
+  // const [visaData, setVisaData] = useState();
   const [visaType, setVisaType] = useState("");
   const [selectedDocuments, setSelectDocuments] = useState([]);
   const { user } = useAuth();
@@ -62,7 +63,7 @@ const UpdateModal = ({ _id }) => {
     };
     // console.log(updateVisa);
 
-    fetch(`https://visa-navigator-server-dun.vercel.app/visa/${_id}`, {
+    fetch(`http://localhost:5000/visa/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -79,6 +80,7 @@ const UpdateModal = ({ _id }) => {
             icon: "success",
             confirmButtonText: "Cool",
           });
+          setVisaType;
         }
         const modal = document.getElementById(_id);
         if (modal) {

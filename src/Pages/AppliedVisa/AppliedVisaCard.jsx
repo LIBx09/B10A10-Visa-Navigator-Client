@@ -42,7 +42,7 @@ const AppliedVisaCard = ({ appliedVisa, appliedVisas, setAppliedUsers }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://visa-navigator-server-dun.vercel.app/applied/${_id}`, {
+        fetch(`http://localhost:5000/applied/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

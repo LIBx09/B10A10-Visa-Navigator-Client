@@ -24,7 +24,7 @@ const MyVisas = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://visa-navigator-server-dun.vercel.app/visa/${_id}`, {
+        fetch(`http://localhost:5000/visa/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

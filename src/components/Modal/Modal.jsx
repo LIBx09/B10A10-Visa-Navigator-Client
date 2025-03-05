@@ -53,7 +53,7 @@ const Modal = ({ data }) => {
       apply_date,
     };
 
-    fetch("https://visa-navigator-server-dun.vercel.app/applied", {
+    fetch("http://localhost:5000/applied", {
       method: "POST",
       headers: {
         "content-type": "application/json",

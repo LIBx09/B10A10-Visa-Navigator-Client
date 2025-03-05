@@ -17,14 +17,21 @@ const Navbar = () => {
       <li>
         <Link to="/visa">Visa</Link>
       </li>
-      <li>
-        <Link to="/myVisa">My visa</Link>
-      </li>
+      {user && (
+        <>
+          <li>
+            <Link to="/myVisa">My visa</Link>
+          </li>
 
-      <li>
-        <Link to="/addVisa">Add Visa</Link>
-      </li>
+          <li>
+            <Link to="/addVisa">Add Visa</Link>
+          </li>
 
+          <li>
+            <Link to="/applied">Applied Visa</Link>
+          </li>
+        </>
+      )}
       <li>
         <Link to="/applied">Applied Visa</Link>
       </li>
